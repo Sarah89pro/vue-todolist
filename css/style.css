@@ -10,7 +10,7 @@ body {
     font-family: 'Dancing Script', cursive;
     color: #000;
     background-image: url("../img/stark.jpg"); 
-    background-color: #270505;
+    background-color: #000;
     background-repeat:space;
     background-size:cover; 
      
@@ -136,7 +136,7 @@ body {
 }
 
 .todo .text.completed::before {
-    background: #921C1C;
+    background: #000;
 
 }
 
@@ -151,8 +151,11 @@ body {
 
 .wave.first {
     /*bottom: 1%;*/
-    transform:rotateY(180deg);
+    position: fixed;
+    left: 0;
     bottom: 5%;
+    transform:rotateY(360deg);
+    
 }
 
 /*EDIT MODAL*/ 
@@ -168,8 +171,50 @@ body {
     background-color: rgba(0, 0, 0, .6);
 }
 
+
 .edit-modal .content {
     width: 400px;
     padding: 40px;
-    background: #fff;
+    background: rgba(0, 0, 0, .6);
+    border-radius: 20px;
 }
+
+.edit-modal .content h3 {
+    color: #921C1C;
+}
+
+.edit-modal .content input {
+    margin-right: 20px;
+    font-size: 16px;
+    color: rgba(0, 0, 0, .9);
+    border-radius: 20px;
+    background-color: rgba(146,28,28, .6);
+    transition: border .4s;
+}
+
+.edit-modal .content button {
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #921C1C;
+    background-color: rgba(0, 0, 0, .6);
+    cursor: pointer;
+    border-radius: 30px;
+    transition: background .4s;
+}
+
+
+.edit-modal .content input:hover,
+.edit-modal .content button:focus {
+    background-color: #ccc;
+}
+
+
+
+
+
+
+
+
+
+
